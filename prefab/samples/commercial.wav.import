@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/commercial.wav-400f2e2903ec2f255fc2c0910aec49df.sample"
+
+[deps]
+
+source_file="res://prefab/samples/commercial.wav"
+source_md5="ef6a6255c906184ae4dbe8e65196c81c"
+
+dest_files=[ "res://.import/commercial.wav-400f2e2903ec2f255fc2c0910aec49df.sample" ]
+dest_md5="a324069b06cee2e82fb9939bb9a51114"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/devorrin_narration.wav-c644ee4a74a7dab821ddd8e15d0ebe0a.sample"
+
+[deps]
+
+source_file="res://prefab/samples/devorrin_narration.wav"
+source_md5="5d0d75575a4acfe1cb6d6dc30cc7ff96"
+
+dest_files=[ "res://.import/devorrin_narration.wav-c644ee4a74a7dab821ddd8e15d0ebe0a.sample" ]
+dest_md5="3559a424aacfda8fbce18a76557d46f1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

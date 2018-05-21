@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sakura_narration.wav-6fae28afa82c6ff137ad0da6c9a99cd6.sample"
+
+[deps]
+
+source_file="res://prefab/samples/sakura_narration.wav"
+source_md5="7956d35a23e05f666ff21a7d29ae8bcc"
+
+dest_files=[ "res://.import/sakura_narration.wav-6fae28afa82c6ff137ad0da6c9a99cd6.sample" ]
+dest_md5="c2ae6f811c6a606f58ca5f9a49bb3af1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

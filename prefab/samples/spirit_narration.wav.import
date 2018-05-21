@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spirit_narration.wav-fcb466ded5baffc6887c64e874a8b475.sample"
+
+[deps]
+
+source_file="res://prefab/samples/spirit_narration.wav"
+source_md5="d11b64eb33bedd6cc2f8dc8f33649ffc"
+
+dest_files=[ "res://.import/spirit_narration.wav-fcb466ded5baffc6887c64e874a8b475.sample" ]
+dest_md5="20d2199eefcec2d95631bf97474cda9f"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
