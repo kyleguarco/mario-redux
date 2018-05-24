@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://prefab/sprite-tiles/devorrin/devorrin.png" type="Texture" id=1]
+[ext_resource path="res://scenes/sprites/animations/devorrin/angry.tres" type="Animation" id=2]
+[ext_resource path="res://scenes/sprites/animations/devorrin/idle.tres" type="Animation" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 19.7491, 32.7756 )
+
+[node name="Devorrin" type="Node2D" index="0"]
+
+[node name="Body" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Area" type="Area2D" parent="Body" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Shape" type="CollisionShape2D" parent="Body/Area" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Shape" type="CollisionPolygon2D" parent="Body" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0.0698013, -29.8643, 18.2527, -25.648, 18.7797, -14.0531, 17.1986, 5.97443, 11.1376, 7.81907, 5.86724, 6.50147, 5.60372, 19.6775, 13.7729, 20.2045, 14.2999, 24.6844, -5.72764, 26.002, -4.93708, 4.12979, -13.3697, 2.81219, -13.8968, -1.40413, -5.46412, -1.40413, -4.93708, -14.0531, -11.5251, -15.3707, -11.2616, -18.5329, -8.62637, -20.9046, -8.36285, -26.4385 )
+
+[node name="Apperance" type="Sprite" parent="Body" index="2"]
+
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 3
+_sections_unfolded = [ "Animation" ]
+
+[node name="Animations" type="AnimationPlayer" parent="Body/Apperance" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/angry = ExtResource( 2 )
+anims/idle = ExtResource( 3 )
+blend_times = [  ]
+
+

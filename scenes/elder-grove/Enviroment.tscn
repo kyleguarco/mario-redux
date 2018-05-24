@@ -1,0 +1,270 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://prefab/elder-grove-tiles/ground.png" type="Texture" id=1]
+[ext_resource path="res://prefab/elder-grove-tiles/grass2.png" type="Texture" id=2]
+[ext_resource path="res://prefab/elder-grove-tiles/purple_ground.png" type="Texture" id=3]
+[ext_resource path="res://prefab/elder-grove-tiles/tree3.png" type="Texture" id=4]
+[ext_resource path="res://prefab/elder-grove-tiles/tree2.png" type="Texture" id=5]
+[ext_resource path="res://prefab/elder-grove-tiles/tree1.png" type="Texture" id=6]
+[ext_resource path="res://prefab/elder-grove-tiles/leaves2.png" type="Texture" id=7]
+[ext_resource path="res://prefab/elder-grove-tiles/leaves4.png" type="Texture" id=8]
+[ext_resource path="res://prefab/elder-grove-tiles/sky.png" type="Texture" id=9]
+[ext_resource path="res://prefab/elder-grove-tiles/small_cloud.png" type="Texture" id=10]
+
+[node name="Enviroment" type="Node2D" index="0"]
+
+[node name="Ground" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 9.53674e-07, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+
+[node name="Body" type="StaticBody2D" parent="Ground" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Ground/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Grass" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 60, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 2 )
+
+[node name="Body" type="StaticBody2D" parent="Grass" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Grass/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Purple Ground" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 120, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 3 )
+
+[node name="Body" type="StaticBody2D" parent="Purple Ground" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Purple Ground/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Tree (Dark)" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 180, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 4 )
+
+[node name="Body" type="StaticBody2D" parent="Tree (Dark)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Tree (Dark)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Tree (Light)" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 240, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 5 )
+
+[node name="Body" type="StaticBody2D" parent="Tree (Light)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Tree (Light)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Tree (Med)" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 300, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 6 )
+
+[node name="Body" type="StaticBody2D" parent="Tree (Med)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Tree (Med)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Leaves (Light)" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 360, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 7 )
+
+[node name="Body" type="StaticBody2D" parent="Leaves (Light)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Leaves (Light)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Leaves (Mint)" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 420, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 8 )
+
+[node name="Body" type="StaticBody2D" parent="Leaves (Mint)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Leaves (Mint)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Sky" type="Sprite" parent="." index="8"]
+
+position = Vector2( 420, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Sky (Collision-able)" type="Sprite" parent="." index="9"]
+
+modulate = Color( 0.0762634, 0.929688, 0.909685, 1 )
+position = Vector2( 540, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="StaticBody2D" parent="Sky (Collision-able)" index="0"]
+
+position = Vector2( -3.05176e-05, 0 )
+scale = Vector2( 0.999999, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Sky (Collision-able)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32.0001, -1.01725e-06, -32, -1.01725e-06, -32, -32 )
+
+[node name="Sky (Area)" type="Sprite" parent="." index="10"]
+
+position = Vector2( 600, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="Area2D" parent="Sky (Area)" index="0"]
+
+position = Vector2( 3.05176e-05, 0 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Collision" type="CollisionPolygon2D" parent="Sky (Area)/Body" index="0"]
+
+position = Vector2( 0, -1.01725e-06 )
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Cloud" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 480, 9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 10 )
+
+[node name="Body" type="Area2D" parent="Cloud" index="0"]
+
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Collision" type="CollisionPolygon2D" parent="Cloud/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+

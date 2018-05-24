@@ -12,7 +12,9 @@ config_version=3
 
 config/name="Mario_Redux"
 run/main_scene="res://scenes/menu/Menu.tscn"
+run/low_processor_mode=true
 config/icon="res://icon.png"
+run/image=""
 
 [input]
 
@@ -43,16 +45,14 @@ key_d=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"",
 
 [layer_names]
 
-2d_render/layer_1="Outline"
-2d_physics/layer_1="Outline"
-2d_render/layer_2="Enviroment"
-2d_physics/layer_2="Enviroment"
-2d_render/layer_3="Water Mask"
-2d_physics/layer_3="Water Mask"
-2d_render/layer_4="Player"
-2d_physics/layer_4="Player"
 2d_render/water=false
+
+[physics]
+
+common/physics_fps=40
+2d/thread_model=2
 
 [rendering]
 
+threads/thread_model=2
 environment/default_environment="res://default_env.tres"

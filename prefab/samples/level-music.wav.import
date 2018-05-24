@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/level-music.wav-bb96173d7de9046f770c5b33294104bd.sample"
+
+[deps]
+
+source_file="res://prefab/samples/level-music.wav"
+source_md5="75d4c03d89dae3c1d71a46bb171788af"
+
+dest_files=[ "res://.import/level-music.wav-bb96173d7de9046f770c5b33294104bd.sample" ]
+dest_md5="1a74ed11d02f9f298419e855d7b06a54"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
