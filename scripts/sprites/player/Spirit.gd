@@ -2,8 +2,12 @@ extends Node2D
 # This is an event handler for Spirit
 
 # Jump handler
-export var Can_Jump = true
+export (bool) var Can_Jump = true
 
+# Flower handler
+export (bool) var Is_Powered = false
+
+# Jump Bodies
 func block_jump():
 	Can_Jump = false
 
@@ -15,3 +19,12 @@ func get_jump():
 
 func _on_ground_collision(body):
 	allow_jump()
+
+func powerup():
+	Is_Powered = true
+
+func powerdown():
+	Is_Powered = false
+
+func _on_flower_collect(body):
+	powerup()
