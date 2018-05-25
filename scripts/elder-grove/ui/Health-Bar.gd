@@ -1,15 +1,30 @@
 extends Control
 
-onready var bes = 8
+onready var lab_na = get_node("Name")
+onready var lab_hp = get_node("HP")
+onready var lab_ep = get_node("EP")
+onready var bar_hp = get_node("Health")
+onready var bar_ep = get_node("Power")
 
-func new_hud():
-	return HealthBar.new(8)
+var calc = 0
 
-class HealthBar:
-	var lab_na;var lab_hp;var lab_ep;var bar_hp;var bar_ep
+var Health = 0.0; var Max_Health = 100.0
+var Power = 0.0; var Max_Power = 100.0
+
+func set_name(name):
+	lab_na.text = name
+
+func set_health(hp):
+	Health = hp
+
+func set_power(po):
+	Power = po
+
+func update():
+	calc = (Health / Max_Health) * 1.0
+	bar_hp.set_scale(Vector2((calc), 1))
+	lab_hp.text = (str(calc * 100) + "%")
 	
-	func _init(s):
-		lab_na = s
-		
-	func get_s():
-		return lab_na
+	calc = (Power / Max_Power) * 1.0
+	bar_ep.set_scale(Vector2((calc), 1))
+	lab_ep.text = (str(calc * 100) + "%")

@@ -1,13 +1,14 @@
 extends Node2D
 
+onready var _AREA = get_parent().get_node(".")
 onready var _ANIM = get_node("Apperance/Animations")
 
-# Flower collection event handler
-var is_collected = false
-
 func _ready():
+	set("NAME", "FLOWER")
 	_ANIM.current_animation = "sparkle"
+	
 
-func _on_Area_body_entered(body):
-	is_collected = true
-	self.queue_free()
+func _on_flower_collect(body):
+	if body.get_name() == "Spirit":
+		_ANIM.stop(false)
+		_AREA.queue_free()

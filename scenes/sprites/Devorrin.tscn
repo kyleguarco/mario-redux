@@ -1,53 +1,36 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/sprites/devorrin/Devorrin.gd" type="Script" id=1]
 [ext_resource path="res://prefab/sprite-tiles/devorrin/devorrin.png" type="Texture" id=2]
 [ext_resource path="res://scenes/sprites/animations/devorrin/angry.tres" type="Animation" id=3]
 [ext_resource path="res://scenes/sprites/animations/devorrin/idle.tres" type="Animation" id=4]
+[ext_resource path="res://scripts/sprites/devorrin/Body.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 19.7491, 32.7756 )
+extents = Vector2( 8.85614, 10 )
 
-[node name="Devorrin" type="Node2D" index="0"]
+[node name="Devorrin" type="KinematicBody2D"]
 
-script = ExtResource( 1 )
-
-[node name="Body" type="KinematicBody2D" parent="." index="0"]
-
-input_pickable = false
+input_pickable = true
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
+Health = 100
+Speed = 5
+Delta_Limit = 500
+Go = true
 
-[node name="Area" type="Area2D" parent="Body" index="0"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="Shape" type="CollisionShape2D" parent="Body/Area" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="Shape" type="CollisionPolygon2D" parent="Body" index="1"]
-
-build_mode = 0
-polygon = PoolVector2Array( 0.0698013, -29.8643, 18.2527, -25.648, 18.7797, -14.0531, 17.1986, 5.97443, 11.1376, 7.81907, 5.86724, 6.50147, 5.60372, 19.6775, 13.7729, 20.2045, 14.2999, 24.6844, -5.72764, 26.002, -4.93708, 4.12979, -13.3697, 2.81219, -13.8968, -1.40413, -5.46412, -1.40413, -4.93708, -14.0531, -11.5251, -15.3707, -11.2616, -18.5329, -8.62637, -20.9046, -8.36285, -26.4385 )
-
-[node name="Apperance" type="Sprite" parent="Body" index="2"]
+[node name="Apperance" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
 vframes = 3
 hframes = 3
 _sections_unfolded = [ "Animation" ]
 
-[node name="Animations" type="AnimationPlayer" parent="Body/Apperance" index="0"]
+[node name="Animations" type="AnimationPlayer" parent="Apperance" index="0"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -57,5 +40,31 @@ playback_speed = 1.0
 anims/angry = ExtResource( 3 )
 anims/idle = ExtResource( 4 )
 blend_times = [  ]
+
+[node name="Area" type="Area2D" parent="." index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+
+[node name="Body" type="CollisionPolygon2D" parent="Area" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -7.5278, 24.2369, -4.93953, 3.53072, -14.322, 2.56012, -12.7043, -7.14589, -3.96893, -13.9401, -12.3808, -17.499, -6.55721, -30.4403, -0.0865326, -32.3815, 7.67827, -29.4697, 7.67827, -25.5873, 17.3843, -28.1756, 18.6784, -21.7049, 18.0313, -12.646, 7.67827, -7.46942, 17.0607, 0.295383, 17.7078, 5.14838, 13.1783, 8.38372, 8.32533, 8.70725, 7.0312, 6.44252, 6.06061, 18.7368, 13.5019, 20.3545, 16.7372, 24.8839, 15.7666, 25.8545, -2.6748, 27.1487 )
+
+[node name="Shape" type="CollisionShape2D" parent="." index="2"]
+
+visible = false
+position = Vector2( 0.37455, 0 )
+scale = Vector2( 0.719789, 1 )
+shape = SubResource( 1 )
+disabled = true
+
+[connection signal="body_entered" from="Area" to="." method="_on_body_collision"]
 
 

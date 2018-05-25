@@ -1,47 +1,70 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scripts/sprites/ball/Body.gd" type="Script" id=1]
+[ext_resource path="res://scripts/sprites/ball/Ball.gd" type="Script" id=1]
 [ext_resource path="res://prefab/sprite-tiles/attack/ball.png" type="Texture" id=2]
+[ext_resource path="res://prefab/ui-tiles/pix.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Ball" type="Node2D"]
-
-[node name="Body" type="KinematicBody2D" parent="." index="0"]
+[node name="Ball" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-collision/safe_margin = 0.08
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
 script = ExtResource( 1 )
 Speed = 20
 Delta_Limit = 50
 
-[node name="Area" type="Area2D" parent="Body" index="0"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="Shape" type="CollisionShape2D" parent="Body/Area" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="Shape" type="CollisionPolygon2D" parent="Body" index="1"]
-
-build_mode = 0
-polygon = PoolVector2Array( -3.5505, -7.70311, 3.40843, -7.81909, 7.46781, -4.33962, 7.69978, 5.2869, 4.45227, 7.72253, -3.78247, 7.95449, -8.07381, 4.0111, -7.95783, -4.57159 )
-
-[node name="Apperance" type="Sprite" parent="Body" index="2"]
+[node name="Apperance" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation" ]
+
+[node name="Shape" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="Light" type="Light2D" parent="." index="2"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 0, 0, 0, 1 )
+energy = 1.75
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
 
 

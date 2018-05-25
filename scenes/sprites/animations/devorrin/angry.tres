@@ -4,7 +4,7 @@
 
 resource_name = "angry"
 length = 1.0
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")

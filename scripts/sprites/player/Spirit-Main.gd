@@ -1,10 +1,5 @@
 extends KinematicBody2D
 
-export (int) var Health = 100
-export (int) var Speed = 20
-export (String) var Name = "Spirit"
-export (bool) var Is_Powered = false
-
 onready var regularAni = get_node("Regular/Animations")
 onready var regularApp = get_node("Regular")
 onready var poweredAni = get_node("Powered/Animations")
@@ -14,6 +9,8 @@ onready var ball = preload("res://scenes/sprites/Ball.tscn")
 onready var _SPIRIT = get_node("..")
 onready var _ANIM = regularAni
 onready var _APPE = regularApp
+onready var _SPEED = _SPIRIT.Speed
+
 var reset_anim = false
 
 const _gravity = 172
@@ -47,16 +44,26 @@ func _physics_process(delta):
 	direction = Vector2()
 	if Input.is_action_pressed("key_w"):
 		if _SPIRIT.get_jump():
-			move_and_slide(Vector2(0, (-350 * Speed)))
+			move_and_slide(Vector2(0, (-350 * _SPEED)))
 			_SPIRIT.block_jump()
 	elif Input.is_action_pressed("key_a"):
-		direction.x -= (10 * Speed)
+		direction.x -= (10 * _SPEED)
 		_APPE.flip_h = true
 	elif Input.is_action_pressed("key_d"):
-		direction.x += (10 * Speed)
+		direction.x += (10 * _SPEED)
 		_APPE.flip_h = false
 	elif Input.is_action_pressed("ui_select"):
-		self.add_child(ball.instance())
+		var flip = true
+		
+		if _APPE.flip_h == true:
+			flip = false
+		
+		var b = ball.instance()
+		get_parent().add_child(b)
+		b.position.x = self.position.x
+		b.position.y = self.position.y
+		b.set_vector(flip)
+		b.go()
 	
 	if direction.x == 0:
 		_ANIM.current_animation = "idle"
@@ -69,9 +76,9 @@ func _physics_process(delta):
 	
 	move_and_slide(velocity)
 	
+
 func _on_connect_body(value):
-	var calc = Health - 5
-	#hud.hit(5)
+	pass
 
 func _on_collect_flower(value):
 	reset_anim = true
