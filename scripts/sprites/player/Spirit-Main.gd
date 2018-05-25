@@ -4,6 +4,8 @@ onready var regularAni = get_node("Regular/Animations")
 onready var regularApp = get_node("Regular")
 onready var poweredAni = get_node("Powered/Animations")
 onready var poweredApp = get_node("Powered")
+onready var shieldApp = get_node("Shield")
+onready var shieldAni = get_node("Shield/Animations")
 onready var ball = preload("res://scenes/sprites/Ball.tscn")
 
 onready var _SPIRIT = get_node("..")
@@ -39,6 +41,14 @@ func _process(delta):
 			_ANIM = regularAni
 			_APPE = regularApp
 		_SPIRIT.powerdown()
+	if _SPIRIT.Is_Shielding:
+		shieldApp.show()
+		shieldApp.show_on_top = true
+		shieldAni.current_animation = "idle"
+	else:
+		shieldAni.current_animation = "breaking"
+		shieldAni.stop(false)
+		shieldApp.hide()
 
 func _physics_process(delta):
 	direction = Vector2()
@@ -49,9 +59,13 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("key_a"):
 		direction.x -= (10 * _SPEED)
 		_APPE.flip_h = true
+		shieldApp.position.x = self.position.x - 20
+		shieldApp.flip_h = true
 	elif Input.is_action_pressed("key_d"):
 		direction.x += (10 * _SPEED)
 		_APPE.flip_h = false
+		shieldApp.position.x = self.position.x + 20
+		shieldApp.flip_h = false
 	elif Input.is_action_pressed("ui_select"):
 		var flip = true
 		

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/elder-grove/Enviroment.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/sprites/Flower.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/sprites/Spirit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/sprites/Devorrin.tscn" type="PackedScene" id=4]
-[ext_resource path="res://prefab/samples/level-music.wav" type="AudioStream" id=5]
+[ext_resource path="res://scenes/sprites/Fly.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefab/samples/level-music.wav" type="AudioStream" id=6]
 
 [node name="Elder Grove" type="Node2D" index="0"]
 
@@ -224,16 +225,36 @@ polygon = PoolVector2Array( 2140, 30, 2180, 30, 2180, 60, 2140, 60 )
 
 [node name="Spirit" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( -9910, 250 )
+position = Vector2( -11560, 670 )
 
 [node name="Devorrin" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( -9590, 420 )
 Go = false
 
-[node name="Level" type="AudioStreamPlayer" parent="." index="3"]
+[node name="Fly" parent="." index="3" instance=ExtResource( 5 )]
 
-stream = ExtResource( 5 )
+position = Vector2( -10190, -160 )
+
+[node name="Fly2" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( -10510, -260 )
+
+[node name="Fly3" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( -11580, 60 )
+
+[node name="Fly4" parent="." index="6" instance=ExtResource( 5 )]
+
+position = Vector2( -11230, 350 )
+
+[node name="Fly5" parent="." index="7" instance=ExtResource( 5 )]
+
+position = Vector2( -10990, -270 )
+
+[node name="Level" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 6 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0

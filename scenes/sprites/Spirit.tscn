@@ -67,6 +67,7 @@ Damage = 4
 Name = "Spirit"
 Can_Jump = true
 Is_Powered = false
+Is_Shielding = false
 
 [node name="Spirit" type="KinematicBody2D" parent="." index="0"]
 
@@ -139,7 +140,7 @@ blend_times = [  ]
 [node name="Shield" type="Sprite" parent="Spirit" index="4"]
 
 visible = false
-position = Vector2( 19.8525, 0 )
+position = Vector2( 2.8525, 0 )
 texture = ExtResource( 7 )
 vframes = 3
 hframes = 2

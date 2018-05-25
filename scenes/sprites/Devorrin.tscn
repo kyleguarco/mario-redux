@@ -20,7 +20,7 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 Health = 100
 Speed = 5
-Delta_Limit = 500
+Delta_Limit = 50
 Go = true
 
 [node name="Apperance" type="Sprite" parent="." index="0"]
@@ -28,7 +28,7 @@ Go = true
 texture = ExtResource( 2 )
 vframes = 3
 hframes = 3
-_sections_unfolded = [ "Animation" ]
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
 
 [node name="Animations" type="AnimationPlayer" parent="Apperance" index="0"]
 

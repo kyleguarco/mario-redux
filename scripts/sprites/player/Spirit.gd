@@ -15,13 +15,31 @@ export (bool) var Can_Jump = true
 # Flower handler
 export (bool) var Is_Powered = false
 
+# Full Power Handler
+export (bool) var Is_Shielding = false
+
 func _ready():
 	set("NAME", "SPIRIT")
+	healthBar.set_name("Spirit")
 	healthBar.set_health(Health)
 	healthBar.set_power(Power)
 
 func _process(delta):
+	if Power == 100:
+		Is_Shielding = true
+	if Is_Shielding:
+		update_ep(Power - 1)
+		if Power < 5:
+			Is_Shielding = false
 	healthBar.update()
+
+func update_hp(hp):
+	Health = hp
+	healthBar.set_health(Health)
+
+func update_ep(ep):
+	Power = ep
+	healthBar.set_power(Power)
 
 # Jump Bodies
 func block_jump():
@@ -42,10 +60,10 @@ func powerup():
 func powerdown():
 	Is_Powered = false
 
+# Flower Physics
 func _on_flower_collect(body):
-	print(body.get_name())
 	if body.get_name() == "Spirit":
-		healthBar.set_power(80)
+		update_ep(100)
 		powerup()
 
 # Area Physics
@@ -54,6 +72,6 @@ func _on_area_entered(body):
 		"Ball": 
 			continue
 		"Death":
-			Health -= 5
+			update_hp(Health - 5)
 		_:
 			continue
