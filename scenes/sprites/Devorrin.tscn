@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8.85614, 10 )
 
-[node name="Devorrin" type="KinematicBody2D"]
+[node name="Devorrin" type="KinematicBody2D" index="0"]
 
 input_pickable = true
 collision_layer = 1
@@ -41,7 +41,15 @@ anims/angry = ExtResource( 3 )
 anims/idle = ExtResource( 4 )
 blend_times = [  ]
 
-[node name="Area" type="Area2D" parent="." index="1"]
+[node name="Shape" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( 0.37455, 0 )
+scale = Vector2( 0.719789, 1 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Area" type="Area2D" parent="." index="2"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -56,14 +64,6 @@ script = ExtResource( 5 )
 
 build_mode = 0
 polygon = PoolVector2Array( -7.5278, 24.2369, -4.93953, 3.53072, -14.322, 2.56012, -12.7043, -7.14589, -3.96893, -13.9401, -12.3808, -17.499, -6.55721, -30.4403, -0.0865326, -32.3815, 7.67827, -29.4697, 7.67827, -25.5873, 17.3843, -28.1756, 18.6784, -21.7049, 18.0313, -12.646, 7.67827, -7.46942, 17.0607, 0.295383, 17.7078, 5.14838, 13.1783, 8.38372, 8.32533, 8.70725, 7.0312, 6.44252, 6.06061, 18.7368, 13.5019, 20.3545, 16.7372, 24.8839, 15.7666, 25.8545, -2.6748, 27.1487 )
-
-[node name="Shape" type="CollisionShape2D" parent="." index="2"]
-
-visible = false
-position = Vector2( 0.37455, 0 )
-scale = Vector2( 0.719789, 1 )
-shape = SubResource( 1 )
-disabled = true
 
 [connection signal="body_entered" from="Area" to="." method="_on_body_collision"]
 

@@ -219,10 +219,11 @@ bounce = 0.0
 [node name="Collision" type="CollisionPolygon2D" parent="Sky (Collision-able)/Body" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 32, -32, 32.0001, -1.01725e-06, -32, -1.01725e-06, -32, -32 )
+polygon = PoolVector2Array( 32, -32, 32, -21.3333, -32.0001, -21.3333, -32, -32 )
 
 [node name="Sky (Area)" type="Sprite" parent="." index="10"]
 
+editor/display_folded = true
 position = Vector2( 600, 9.53674e-07 )
 scale = Vector2( 0.9375, 0.9375 )
 texture = ExtResource( 9 )
@@ -266,5 +267,133 @@ audio_bus_name = "Master"
 
 build_mode = 0
 polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Corrupt Tree (Light)" type="Sprite" parent="." index="12"]
+
+editor/display_folded = true
+modulate = Color( 0.889292, 0.121399, 0.914062, 1 )
+position = Vector2( 0, 60 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="StaticBody2D" parent="Corrupt Tree (Light)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Corrupt Tree (Light)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Corrupt Tree (Med)" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+modulate = Color( 0.541274, 0.00436401, 0.558594, 1 )
+position = Vector2( 60, 60 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="StaticBody2D" parent="Corrupt Tree (Med)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Corrupt Tree (Med)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Corrupt Tree (Dark)" type="Sprite" parent="." index="14"]
+
+editor/display_folded = true
+modulate = Color( 0.393555, 0, 0.40625, 1 )
+position = Vector2( 120, 60 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="StaticBody2D" parent="Corrupt Tree (Dark)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Corrupt Tree (Dark)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Corrupted Leaves (Light)" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+modulate = Color( 0.523493, 0.0448608, 0.765625, 1 )
+position = Vector2( 180, 60 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="StaticBody2D" parent="Corrupted Leaves (Light)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Corrupted Leaves (Light)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Corrupted Leaves (Dark)" type="Sprite" parent="." index="16"]
+
+editor/display_folded = true
+modulate = Color( 0.421743, 0.0431213, 0.613281, 1 )
+position = Vector2( 240, 60 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="StaticBody2D" parent="Corrupted Leaves (Dark)" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="Corrupted Leaves (Dark)/Body" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[node name="Corrupted Sky" type="Sprite" parent="." index="17"]
+
+modulate = Color( 0.343771, 0.0369263, 0.429688, 1 )
+position = Vector2( 300, 60 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Visibility" ]
 
 

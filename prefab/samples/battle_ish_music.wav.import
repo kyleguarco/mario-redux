@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/battle_ish_music.wav-e34e5cb2c604efad80e5c4f8cfb464f9.sample"
+
+[deps]
+
+source_file="res://prefab/samples/battle_ish_music.wav"
+source_md5="6d0c8ab623ad86419e0486f85181b123"
+
+dest_files=[ "res://.import/battle_ish_music.wav-e34e5cb2c604efad80e5c4f8cfb464f9.sample" ]
+dest_md5="b8c89904651f6f77b306dc94f7b715c5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

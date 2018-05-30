@@ -1,15 +1,15 @@
-[gd_resource type="TileSet" load_steps=20 format=2]
+[gd_resource type="TileSet" load_steps=25 format=2]
 
 [ext_resource path="res://prefab/elder-grove-tiles/ground.png" type="Texture" id=1]
 [ext_resource path="res://prefab/elder-grove-tiles/grass2.png" type="Texture" id=2]
 [ext_resource path="res://prefab/elder-grove-tiles/sky.png" type="Texture" id=3]
-[ext_resource path="res://prefab/elder-grove-tiles/purple_ground.png" type="Texture" id=4]
+[ext_resource path="res://prefab/elder-grove-tiles/small_cloud.png" type="Texture" id=4]
 [ext_resource path="res://prefab/elder-grove-tiles/tree3.png" type="Texture" id=5]
-[ext_resource path="res://prefab/elder-grove-tiles/tree2.png" type="Texture" id=6]
-[ext_resource path="res://prefab/elder-grove-tiles/tree1.png" type="Texture" id=7]
-[ext_resource path="res://prefab/elder-grove-tiles/leaves2.png" type="Texture" id=8]
-[ext_resource path="res://prefab/elder-grove-tiles/leaves4.png" type="Texture" id=9]
-[ext_resource path="res://prefab/elder-grove-tiles/small_cloud.png" type="Texture" id=10]
+[ext_resource path="res://prefab/elder-grove-tiles/leaves2.png" type="Texture" id=6]
+[ext_resource path="res://prefab/elder-grove-tiles/purple_ground.png" type="Texture" id=7]
+[ext_resource path="res://prefab/elder-grove-tiles/tree2.png" type="Texture" id=8]
+[ext_resource path="res://prefab/elder-grove-tiles/tree1.png" type="Texture" id=9]
+[ext_resource path="res://prefab/elder-grove-tiles/leaves4.png" type="Texture" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -21,10 +21,10 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 custom_solver_bias = 0.0
 points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( 32, -32, 32.0001, -1.01725e-06, -32, -1.01725e-06, -32, -32 )
+points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 
@@ -55,6 +55,31 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 32, -32, 32, -21.3333, -32.0001, -21.3333, -32, -32 )
 
 [resource]
 
@@ -87,7 +112,7 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 2/name = "Purple Ground"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 7 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 64, 64 )
@@ -97,7 +122,7 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 4 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 3/name = "Tree (Dark)"
@@ -111,11 +136,11 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 4/name = "Tree (Light)"
-4/texture = ExtResource( 6 )
+4/texture = ExtResource( 8 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 64, 64 )
@@ -125,11 +150,11 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 6 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 5/name = "Tree (Med)"
-5/texture = ExtResource( 7 )
+5/texture = ExtResource( 9 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 64, 64 )
@@ -139,11 +164,11 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 7 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 6/name = "Leaves (Light)"
-6/texture = ExtResource( 8 )
+6/texture = ExtResource( 6 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
@@ -153,11 +178,11 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 8 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 7/name = "Leaves (Mint)"
-7/texture = ExtResource( 9 )
+7/texture = ExtResource( 10 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 64, 64 )
@@ -167,7 +192,7 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 9 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 8/name = "Sky"
@@ -179,31 +204,31 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 8/occluder_offset = Vector2( 32, 32 )
 8/navigation_offset = Vector2( 32, 32 )
 8/shapes = [  ]
-9/name = "Cloud"
-9/texture = ExtResource( 10 )
+9/name = "Sky (Collision-able)"
+9/texture = ExtResource( 3 )
 9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
+9/modulate = Color( 0.0762634, 0.929688, 0.909685, 1 )
 9/region = Rect2( 0, 0, 64, 64 )
 9/is_autotile = false
 9/occluder_offset = Vector2( 32, 32 )
 9/navigation_offset = Vector2( 32, 32 )
-9/shapes = [  ]
-10/name = "Sky (Collision-able)"
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+10/name = "Sky (Area)"
 10/texture = ExtResource( 3 )
 10/tex_offset = Vector2( 0, 0 )
-10/modulate = Color( 0.0762634, 0.929688, 0.909685, 1 )
+10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 64, 64 )
 10/is_autotile = false
 10/occluder_offset = Vector2( 32, 32 )
 10/navigation_offset = Vector2( 32, 32 )
-10/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"shape": SubResource( 10 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
-} ]
-11/name = "Sky (Area)"
-11/texture = ExtResource( 3 )
+10/shapes = [  ]
+11/name = "Cloud"
+11/texture = ExtResource( 4 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 64, 64 )
@@ -211,4 +236,83 @@ points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 11/occluder_offset = Vector2( 32, 32 )
 11/navigation_offset = Vector2( 32, 32 )
 11/shapes = [  ]
+12/name = "Corrupt Tree (Light)"
+12/texture = ExtResource( 5 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 0.889292, 0.121399, 0.914062, 1 )
+12/region = Rect2( 0, 0, 64, 64 )
+12/is_autotile = false
+12/occluder_offset = Vector2( 32, 32 )
+12/navigation_offset = Vector2( 32, 32 )
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+13/name = "Corrupt Tree (Med)"
+13/texture = ExtResource( 5 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 0.541274, 0.00436401, 0.558594, 1 )
+13/region = Rect2( 0, 0, 64, 64 )
+13/is_autotile = false
+13/occluder_offset = Vector2( 32, 32 )
+13/navigation_offset = Vector2( 32, 32 )
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+14/name = "Corrupt Tree (Dark)"
+14/texture = ExtResource( 5 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 0.393555, 0, 0.40625, 1 )
+14/region = Rect2( 0, 0, 64, 64 )
+14/is_autotile = false
+14/occluder_offset = Vector2( 32, 32 )
+14/navigation_offset = Vector2( 32, 32 )
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+15/name = "Corrupted Leaves (Light)"
+15/texture = ExtResource( 6 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 0.523493, 0.0448608, 0.765625, 1 )
+15/region = Rect2( 0, 0, 64, 64 )
+15/is_autotile = false
+15/occluder_offset = Vector2( 32, 32 )
+15/navigation_offset = Vector2( 32, 32 )
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+16/name = "Corrupted Leaves (Dark)"
+16/texture = ExtResource( 6 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 0.421743, 0.0431213, 0.613281, 1 )
+16/region = Rect2( 0, 0, 64, 64 )
+16/is_autotile = false
+16/occluder_offset = Vector2( 32, 32 )
+16/navigation_offset = Vector2( 32, 32 )
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+17/name = "Corrupted Sky"
+17/texture = ExtResource( 3 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 0.343771, 0.0369263, 0.429688, 1 )
+17/region = Rect2( 0, 0, 64, 64 )
+17/is_autotile = false
+17/occluder_offset = Vector2( 32, 32 )
+17/navigation_offset = Vector2( 32, 32 )
+17/shapes = [  ]
 

@@ -2,7 +2,7 @@ extends RigidBody2D
 
 export (int) var Speed = 20
 export (int) var Damage = 10
-export (int) var Delta_Limit = 50
+export (int) var Delta_Limit = 100
 
 # Used to count delta
 var count_phys = false
@@ -12,7 +12,7 @@ var go = false
 var curr_vector = right()
 
 func _ready():
-	set("NAME", "BALL")
+	set_meta("NAME", "BALL")
 
 # Controls the ball physics
 func push(right):

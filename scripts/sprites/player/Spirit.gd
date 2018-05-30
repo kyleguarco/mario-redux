@@ -18,6 +18,8 @@ export (bool) var Is_Powered = false
 # Full Power Handler
 export (bool) var Is_Shielding = false
 
+const PLAY_SCENE_PATH = "res://scenes/elder-grove/Devorrins-Lair.tscn"
+
 func _ready():
 	set("NAME", "SPIRIT")
 	healthBar.set_name("Spirit")
@@ -31,6 +33,9 @@ func _process(delta):
 		update_ep(Power - 1)
 		if Power < 5:
 			Is_Shielding = false
+	if Health < 2:
+		get_tree().quit()
+		
 	healthBar.update()
 
 func update_hp(hp):
@@ -68,10 +73,14 @@ func _on_flower_collect(body):
 
 # Area Physics
 func _on_area_entered(body):
-	match body.get_name():
-		"Ball": 
-			continue
-		"Death":
+	if body.get_class() == "RigidBody2D":
+		if !body.has_meta("NAME"):
 			update_hp(Health - 5)
-		_:
-			continue
+	elif body.get_class() == "KinematicBody2D":
+		if body.get_name() != "Spirit":
+			update_hp(Health - 10)
+
+
+func _on_Next_body_entered(body):
+	if body.get_name() == "Spirit":
+		get_tree().change_scene(PLAY_SCENE_PATH)

@@ -31,7 +31,8 @@ angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
 Speed = 20
-Delta_Limit = 50
+Damage = 10
+Delta_Limit = 100
 
 [node name="Apperance" type="Sprite" parent="." index="0"]
 

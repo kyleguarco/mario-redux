@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/sprites/sakura/Sakura.gd" type="Script" id=1]
+[ext_resource path="res://prefab/sprite-tiles/sakura/sakura.png" type="Texture" id=2]
+[ext_resource path="res://scenes/sprites/animations/sakura/help.tres" type="Animation" id=3]
+[ext_resource path="res://scenes/sprites/animations/sakura/idle.tres" type="Animation" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 20.1406 )
+
+[node name="Sakura" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+Is_Crying = true
+
+[node name="Apperance" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="Animations" type="AnimationPlayer" parent="Apperance" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/help = ExtResource( 3 )
+anims/idle = ExtResource( 4 )
+blend_times = [  ]
+
+[node name="Shape" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Area" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Shape" type="CollisionPolygon2D" parent="Area" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -3.32198, -18.9682, 3.8747, -20.6389, 7.08751, -12.5426, 6.83048, -0.719494, 3.8747, 3.13587, 4.51726, 10.3326, 4.26024, 13.9309, 2.46107, 14.5735, 2.07553, 18.4288, -7.43437, 19.1999, -7.30586, 15.8586, -5.37818, 14.959, -5.37818, 13.5454, -6.27776, 12.2602, -6.14925, 5.5776, -5.76371, -3.03271, -7.94842, -6.117, -8.07693, -12.9282, -7.43437, -16.0124 )
+
+

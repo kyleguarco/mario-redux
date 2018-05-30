@@ -7,10 +7,10 @@ path="res://.import/spirit_narration.wav-fcb466ded5baffc6887c64e874a8b475.sample
 [deps]
 
 source_file="res://prefab/samples/spirit_narration.wav"
-source_md5="d11b64eb33bedd6cc2f8dc8f33649ffc"
+source_md5="4836745f792e5c24364bc3734688b755"
 
 dest_files=[ "res://.import/spirit_narration.wav-fcb466ded5baffc6887c64e874a8b475.sample" ]
-dest_md5="20d2199eefcec2d95631bf97474cda9f"
+dest_md5="837db4f974e25b003b1aace7d66fd605"
 
 [params]
 
